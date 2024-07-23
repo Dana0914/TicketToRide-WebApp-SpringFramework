@@ -13,16 +13,19 @@ The price of the travel through 2 segments is 7 GBP.
 The price of the travel through 3 segments is 10 GBP.
 
 You need to provide an API with 2 functions (endpoints) for a traveller:
+
 1. Calculate the price of a most optimal travel between two towns in GBP.
 2. Save the ticket to a storage if a traveller has enough money.
 
 
 Requirements:
+
 ● The API to calculate the price should be public.
 ● The service should have layered architecture.
 ● The service should be able to save successfully bought ticket.
 
 Nice to have:
+
 ● An ability to persist the ticket to a database.
 ● The API to buy a ticket should be private. It should be protected with
 username and password.
@@ -31,6 +34,7 @@ username and password.
 ● Readme file
 
 Stack:
+
 Java 21, Spring Boot, Spring Data, Spring Security, JUnit 5, Mockito, PostgreSQL,
 Maven/Gradle
 
