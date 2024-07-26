@@ -12,6 +12,9 @@ The price of the travel through 1 segment is 5 GBP.
 The price of the travel through 2 segments is 7 GBP.
 The price of the travel through 3 segments is 10 GBP.
 
+![image](https://github.com/user-attachments/assets/7eb48d0b-607a-4255-a795-e50673c14c3f)
+
+
 You need to provide an API with 2 functions (endpoints) for a traveller:
 
 1. Calculate the price of a most optimal travel between two towns in GBP.
