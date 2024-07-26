@@ -1,20 +1,20 @@
 package andersen.com.tickettoridespring.entities;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
-import java.util.List;
 
 @Setter
 @Getter
-@Data
 @Entity
 @Table(name = "traveller")
 public class Traveller {
-
+    @ToString.Exclude
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -24,8 +24,9 @@ public class Traveller {
     @Column(name = "traveller_amount")
     private Integer travellerAmount;
 
-    @OneToMany(mappedBy = "traveller")
-    private List<Ticket> ticket;
+    @ToString.Exclude
+    @OneToOne(mappedBy = "traveller")
+    private Ticket ticket;
 
 
 }
