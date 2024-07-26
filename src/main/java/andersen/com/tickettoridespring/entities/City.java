@@ -2,32 +2,25 @@ package andersen.com.tickettoridespring.entities;
 
 
 import jakarta.persistence.*;
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.List;
+import java.util.Set;
 
-@Setter
 @Getter
-@Data
+@Setter
 @Entity
 @Table(name = "city")
 public class City {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
     private Long id;
     @Column(name = "name")
     private String name;
+    @OneToMany(mappedBy = "departureCity")
+    private Set<Route> departureRoutes;
 
-    @OneToMany(mappedBy = "city")
-    List<Route> routes;
-
-    @OneToMany(mappedBy = "city")
-    List<Segments> segments;
-
-
+    @OneToMany(mappedBy = "arrivalCity")
+    private Set<Route> arrivalRoutes;
 
 }
