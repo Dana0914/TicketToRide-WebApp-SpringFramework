@@ -1,7 +1,6 @@
 package andersen.com.tickettoridespring.dto;
 
 
-import andersen.com.tickettoridespring.entities.Traveller;
 import lombok.*;
 
 @Data
@@ -16,5 +15,5 @@ public class TicketRequestDTO {
     private Integer price;
     private String currency;
     private Integer travellerAmount;
-    private Traveller traveller;
+    private String traveller;
 }
